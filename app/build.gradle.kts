@@ -96,6 +96,7 @@ dependencies {
     kapt(Hilt.hiltAndroidCompiler)
     kapt(Hilt.hiltCompiler)
     implementation(Hilt.hiltNavigation)
+    implementation(Hilt.hiltNavigationCompose)
 
     // Retrofit
     implementation(Retrofit.retrofit)

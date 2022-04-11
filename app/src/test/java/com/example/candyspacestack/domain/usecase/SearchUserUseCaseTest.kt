@@ -12,21 +12,21 @@ import org.junit.Test
 @ExperimentalCoroutinesApi
 class SearchUserUseCaseTest {
     private lateinit var sut: SearchUserUseCase
-    private val githubSearchRepository = mockk<StackSearchRepository>()
+    private val searchRepository = mockk<StackSearchRepository>()
 
     @Test
-    fun `given query, when execute is called, then githubSearchRepository searchUser should be called`() =
+    fun `given query, when execute is called, then searchRepository searchUser should be called`() =
         runTest {
-            sut = SearchUserUseCase(githubSearchRepository)
+            sut = SearchUserUseCase(searchRepository)
             val query = "searchQuery"
             coEvery {
-                githubSearchRepository.searchUser(query)
+                searchRepository.searchUser(query)
             } returns flowOf()
 
             sut.execute(query)
 
             coVerify {
-                githubSearchRepository.searchUser(query)
+                searchRepository.searchUser(query)
             }
         }
 }

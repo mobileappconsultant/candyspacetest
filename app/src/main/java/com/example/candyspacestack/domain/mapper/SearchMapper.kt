@@ -30,8 +30,8 @@ class SearchMapper @Inject constructor() {
         return User(
             name = domain.name,
             imageUrl = domain.imageUrl,
-            reputation = 0,
-            location = domain.location.orEmpty(),
+            reputation = domain.reputation,
+            location = domain.location,
             badge = domain.badge,
             creationDate = domain.creationDate
         )

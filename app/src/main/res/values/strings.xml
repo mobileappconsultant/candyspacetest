@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CandySpaceStack</string>
+    <string name="app_name">CandySpace Stack</string>
+    <string name="search_users">Search for stackoverflow users</string>
 </resources>
