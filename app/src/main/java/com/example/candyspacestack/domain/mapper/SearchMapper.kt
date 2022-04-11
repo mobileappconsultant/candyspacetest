@@ -13,7 +13,7 @@ class SearchMapper @Inject constructor() {
         return SearchUserDomain(
             name = schema.displayName,
             imageUrl = schema.profileImage,
-            reputation = 0,
+            reputation = schema.reputation,
             location = schema.location.orEmpty(),
             badge = mapToBadge(schema.badgeCounts),
             creationDate = schema.creationDate.formatMillisToDateString()
