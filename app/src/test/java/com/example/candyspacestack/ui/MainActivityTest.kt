@@ -36,7 +36,7 @@ import org.robolectric.annotation.Config
 @HiltAndroidTest
 @RunWith(RobolectricTestRunner::class)
 @Config(
-    manifest = Config.NONE,
+    manifest = Config.DEFAULT_MANIFEST_NAME,
     sdk = [Build.VERSION_CODES.O_MR1],
     application = HiltTestApplication::class
 )
