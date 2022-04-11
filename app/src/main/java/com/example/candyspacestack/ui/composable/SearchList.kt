@@ -75,4 +75,4 @@ fun SearchList(searchResult: LazyPagingItems<User>, onItemClick: (User) -> Unit)
 }
 
 private fun getErrorMessage(throwable: Throwable): String =
-    if ((throwable as? HttpException)?.code() == 403) "Request Limit Reached" else "An error occurred"
+    if ((throwable as? HttpException)?.code() == 400) "Request Limit Reached" else "An error occurred"

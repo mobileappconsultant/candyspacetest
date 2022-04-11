@@ -6,4 +6,5 @@ object Constants {
     const val SEARCH_BUTTON_TEXT_TAG = "searchButtonTestTag"
     const val CARD_ITEM_TEXT_TAG = "cardOtemTestTag"
     const val IDLE_TAG = "idleText"
+    const val DETAILS_TEST_TAG = "detailsTestTag"
 }
