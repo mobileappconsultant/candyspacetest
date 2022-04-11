@@ -19,8 +19,10 @@ class SearchMapperTest {
     private val mockedLocation = "Germany"
     private val mockedBadge = BadgeCounts(gold = 0, silver = 0, bronze = 0)
     private val mockedCreationDate = 1334247880L
+    private val mockedId = 23
 
     private val mockedSearchSchema = mockk<ItemSchema>().apply {
+        every { userId } returns mockedId
         every { displayName } returns mockedName
         every { profileImage } returns mockedImageUrl
         every { badgeCounts } returns mockedBadge
@@ -35,7 +37,8 @@ class SearchMapperTest {
         reputation = mockedReputation,
         location = mockedLocation,
         badge = Badge(0, 0, 0),
-        creationDate = "2012-04-12"
+        creationDate = "2012-04-12",
+        id = mockedId
     )
 
     private val mockedUser = User(
@@ -44,7 +47,8 @@ class SearchMapperTest {
         reputation = mockedReputation,
         location = mockedLocation,
         badge = Badge(gold = 0, silver = 0, bronze = 0),
-        creationDate = "2012-04-12"
+        creationDate = "2012-04-12",
+        id = mockedId
     )
 
     @Test

@@ -6,6 +6,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class User(
+    val id: Int,
     val name: String,
     val imageUrl: String,
     val reputation: Int,

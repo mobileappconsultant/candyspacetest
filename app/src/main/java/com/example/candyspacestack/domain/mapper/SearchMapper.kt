@@ -11,6 +11,7 @@ import javax.inject.Inject
 class SearchMapper @Inject constructor() {
     fun mapToDomain(schema: ItemSchema): SearchUserDomain {
         return SearchUserDomain(
+            id = schema.userId,
             name = schema.displayName,
             imageUrl = schema.profileImage,
             reputation = schema.reputation,
@@ -28,6 +29,7 @@ class SearchMapper @Inject constructor() {
 
     fun mapToPresentation(domain: SearchUserDomain): User {
         return User(
+            id = domain.id,
             name = domain.name,
             imageUrl = domain.imageUrl,
             reputation = domain.reputation,
